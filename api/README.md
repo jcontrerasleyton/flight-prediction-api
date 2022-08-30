@@ -68,6 +68,6 @@ To run the API locally:
     gunicorn --bind :8080 --workers 1 --threads 8 app:app
     ```
 
-* Generate a POST request (Ex. Postman):
+* Generate a POST request (E.g. Postman):
 
     ![POST request](/media/postman.png)
