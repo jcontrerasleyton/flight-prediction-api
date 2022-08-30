@@ -12,6 +12,7 @@ The REST API file structure is the following:
 
 * `model/pickle_model.pkl` - previously trained logistic regression model
 * `app.py` - API source code, It is responsible for reading the model and making the prediction
+* `Dockerfile` - uses a lightweight Python 3.8 image
 * `requirements.txt` - file with the necessary python libraries
 
 ---
