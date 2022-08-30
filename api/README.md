@@ -26,10 +26,9 @@ To access the API prediction a JSON POST request is needed with the following st
 }
 ```
 
----
-
 The feature_vector value needs to be a csv styled string with 0's and 1's separated by commas, its length cant be lower or higher than 73 and the number of digits must be equal to 37.
 
+---
 ## REST response
 
 The response from the API is a JSON response with the following structure if predicts a flight delay ("Atraso"):
