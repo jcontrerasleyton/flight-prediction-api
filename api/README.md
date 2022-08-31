@@ -52,7 +52,7 @@ If thats not the case ("No Atraso"), the response is the following:
 
 ---
 
-## Local Run  
+## Local debugging  
 
 To run the API locally: 
 
