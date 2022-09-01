@@ -10,6 +10,16 @@ This REST API is responsible for predicting the delay or non-delay of flights th
 
 The REST API file structure is the following: 
 
+```bash
+└── api
+    ├── Dockerfile
+    ├── README.md
+    ├── app.py
+    ├── model
+    │   └── pickle_model.pkl
+    └── requirements.txt
+```
+
 * `model/pickle_model.pkl` - previously trained logistic regression model
 * `app.py` - API source code, is responsible for reading the model and making the prediction based on a request
 * `Dockerfile` - uses a lightweight Python 3.8 image
@@ -21,7 +31,7 @@ The REST API file structure is the following:
 
 To access the API prediction a JSON POST request is needed with the following structure:
 
-```
+```json
 {
     "feature_vector": "0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1"
 }
@@ -34,7 +44,7 @@ The feature_vector value needs to be a csv styled string with 0's and 1's separa
 
 The response from the API is a JSON response with the following structure if predicts a flight delay ("Atraso"):
 
-```
+```json
 {
     "predicted_class": "Atraso",
     "prediction": 1
@@ -43,7 +53,7 @@ The response from the API is a JSON response with the following structure if pre
 
 If thats not the case ("No Atraso"), the response is the following:
 
-```
+```json
 {
     "predicted_class": "No Atraso",
     "prediction": 0
@@ -58,13 +68,13 @@ To run the API locally:
 
 * Install the API requirements:
 
-    ```
+    ```bash
     pip install -r requirements.txt
     ```
 
 * Run the Gunicorn server:
 
-    ```
+    ```bash
     gunicorn --bind :8080 --workers 1 --threads 8 app:app
     ```
 
