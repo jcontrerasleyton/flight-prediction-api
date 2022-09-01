@@ -10,14 +10,14 @@ The Terraform module consist in the following configuration files:
 
 ```bash
 └── terraform
-    ├── README.md
+    ├── scripts
+    │   └── get_latest_tag.sh
     ├── main.tf
+    ├── variables.tf
     ├── outputs.tf
     ├── project.tf
     ├── run_service.tf
-    ├── scripts
-    │   └── get_latest_tag.sh
-    └── variables.tf
+    └── README.md
 ```
 
 * `main.tf` - the main Terraform file

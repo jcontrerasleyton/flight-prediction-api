@@ -12,12 +12,12 @@ The REST API file structure is the following:
 
 ```bash
 └── api
-    ├── Dockerfile
-    ├── README.md
-    ├── app.py
     ├── model
     │   └── pickle_model.pkl
-    └── requirements.txt
+    ├── app.py
+    ├── Dockerfile
+    ├── requirements.txt
+    └── README.md
 ```
 
 * `model/pickle_model.pkl` - previously trained logistic regression model
