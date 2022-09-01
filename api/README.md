@@ -11,7 +11,7 @@ This REST API is responsible for predicting the delay or non-delay of flights th
 The REST API file structure is the following: 
 
 * `model/pickle_model.pkl` - previously trained logistic regression model
-* `app.py` - API source code, It is responsible for reading the model and making the prediction
+* `app.py` - API source code, is responsible for reading the model and making the prediction based on a request
 * `Dockerfile` - uses a lightweight Python 3.8 image
 * `requirements.txt` - file with the necessary python libraries
 
