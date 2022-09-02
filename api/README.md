@@ -2,7 +2,7 @@
 
 ## Description
 
-This REST API is responsible for predicting the delay or non-delay of flights that land or take off from the Santiago de Chile airport (SCL).
+This REST API, developed with the Flask web framework in Python, is responsible for predicting the delay or non-delay of flights that land or take off from the Santiago de Chile airport (SCL).
 
 ---
 
@@ -20,7 +20,7 @@ The REST API file structure is the following:
     └── README.md
 ```
 
-* `model/pickle_model.pkl` - previously trained logistic regression model
+* `model/pickle_model.pkl` - previously trained Logistic Regression model
 * `app.py` - API source code, is responsible for reading the model and making the prediction based on a request
 * `Dockerfile` - uses a lightweight Python 3.8 image
 * `requirements.txt` - file with the necessary python libraries
