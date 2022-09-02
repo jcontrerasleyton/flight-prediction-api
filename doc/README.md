@@ -5,8 +5,8 @@
 These are the assumptions and decisions made for the design and development of this project:
 
 - The model is assumed to be serialized and does not need to be retrained.
-- The prediction is only made for one flight for each request to the api.
-- Api users know the request format in advance.
+- The prediction is only made for one flight for each request to the API.
+- API users know the request format in advance.
 - Selection of GCP over other cloud services is due to familiarity with the platform.
 - Cloud Run is selected over Cloud Functions for the API deployment, taking into consideration that the former is capable of handling multiple requests at a time, while the latter only handles one request at a time.
 
