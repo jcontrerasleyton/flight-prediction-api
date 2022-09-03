@@ -73,8 +73,8 @@ The improvements and considerations that must be applied to the current implemen
 
         - Download the API source code
         - Perform unit tests
-        - Perform a static code scan using Sonarqube
-        - Perform a vulnerability scan using Veracode
+        - Perform a static code scan using [Sonarqube](https://docs.sonarqube.org/latest/)
+        - Perform a vulnerability scan using [Veracode](https://www.veracode.com)
         - Build the API Docker image and upload it to the Container Registry
 
     - The deployment job will be in charge of the following:
