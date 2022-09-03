@@ -53,13 +53,13 @@ The improvements and considerations that must be applied to the current implemen
     - **Internal and Cloud Load Balancing**: request from GCP resources and External HTTP(S) load balancer.
     - **All**: requests are expected from everywhere.
 
-- If request are not Internal, change the Cloud Run authentication settings (*Require Authentication*) and use the [JWT](https://jwt.io/introduction) authorization standard:
+- If request are not Internal, change the Cloud Run authentication settings to *Require Authentication* and use the [JWT](https://jwt.io/introduction) authorization standard:
 
-    - JWT is an open standard for the creation of access tokes.
+    - JSON Web Token (JWT) is an open standard for the creation of access tokens.
     
-    - Only requests that contain a signed JSON Web Token are granted access to the API.
+    - Only requests that contain a signed JSON Web Token are granted access to the API. In other words, only authorized systems can access the API.
 
-    - Its harder to impersonate the user because the token needs to be signed.
+    - One advantage is that is harder to impersonate a user because the token needs to be signed unlike others API token solutions.
 
     - Take in mind that his has an impact in latency due to the token decode and verification process.
 
