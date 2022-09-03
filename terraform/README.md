@@ -4,6 +4,16 @@
 
 This Terraform module is used to provision the GCP infrastructure required to expose the prediction API.
 
+Enables the following APIs:
+- run.googleapis.com
+- iam.googleapis.co
+- cloudbuild.googleapis.com
+
+Creates the following infraesture:
+
+- A service account called "flight-prediction-worker" with the "roles/run.invoker" role.
+- A Cloud Run Service using the API image.
+
 ## Structure  
 
 The Terraform module consist in the following configuration files: 

@@ -31,6 +31,7 @@ Use this option if you want to execute the entire pipeline at once:
 
   * At the end of the execution a link to the API endpoint will appear, use this URL to send REST requests.
 
+    ![Endpoint](/media/endpoint.png)
 
 ### Deploy step by step
 
@@ -72,6 +73,8 @@ Use this option is you want to execute one command at a time:
     ```
 
   * At the end of the execution a link to the API endpoint will appear, use this URL to send REST requests.
+
+    ![Endpoint](/media/endpoint.png)
 
 ---
 
