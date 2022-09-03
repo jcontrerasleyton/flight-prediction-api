@@ -23,6 +23,11 @@ The Flight Delay Prediction API is a Rest API solution developed in Python. It e
 
 Use this option if you want to execute the entire pipeline at once:
 
+  * Make script executable:
+
+    ```bash
+    chmod +x ./deploy.sh
+    ```
 
   * Set project ID:
 
