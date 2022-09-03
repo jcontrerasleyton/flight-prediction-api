@@ -14,7 +14,11 @@ These are the assumptions and decisions made for the design and development of t
 
 ## Model
 
-The model, corresponding to a Logistic Regression model, predicts a categorical variable whose values ​​can be 1 (delay) or 0 (no delay). This model was selected after being compared to an XGBoost model and obtaining higher performance and much shorter processing time.
+The model, corresponding to a Logistic Regression model, predicts a categorical variable whose values can be 1 (delay) or 0 (no delay).
+
+The input consists of a feature vector (of size 37) whose values can be 0 or 1. This vector describes a particular flight and is used to perform the prediction.
+
+This model was selected after being compared to an XGBoost model and obtaining higher performance and a much shorter processing time.
 
 ---
 
@@ -22,8 +26,8 @@ The model, corresponding to a Logistic Regression model, predicts a categorical 
 
 ![Architecture diagram](/media/architecture.png)
 
-The Continuos Integration and Continuous Delivery Pipeline for this project is the following:
+The Continuous Integration and Continuous Delivery Pipeline for this project is the following:
 
-First, Cloud Build is used to build and push a Python 3.7 based image to the GCP Container Registry, which wraps the Rest API and exposes it with a Gunicorn WSGI HTTP Server. 
+- First, Cloud Build is used to build and push a Python 3.7 based image to the GCP Container Registry, which wraps the Rest API and exposes it with a Gunicorn WSGI HTTP Server.
 
-Then, a Terraform manifest its aplied to enable the required APIs, create the Cloud Run service (sourcing the latest pushed image from Container Registry) and configure the IAM neened permissions throughout the automation.
+- Then, a Terraform manifest is applied to enable the required APIs, create the Cloud Run service (sourcing the latest pushed image from the Container Registry), and configure the IAM needed permissions throughout the automation.

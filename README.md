@@ -1,7 +1,7 @@
 # Cloud based flight delay prediction API
 ## Description
 
-The **Flight Delay Prediction API** is a Rest API solution developed in Python, it exposes a machine learning model that has been trained to predict the probability of delays from flights landing or taking off from the Santiago de Chile Airport (SCL). This API is then automatically deployed to Google Cloud Platform (GCP) using Terraform.
+The Flight Delay Prediction API is a Rest API solution developed in Python. It exposes a machine learning model that has been trained to predict the probability of delays from flights landing or taking off from the Santiago de Chile Airport (SCL). This API is then automatically deployed to the Google Cloud Platform (GCP) using Terraform.
 
 ---
 
