@@ -1,18 +1,23 @@
 # Cloud based flight delay prediction API
 
-## Assumptions
+## Assumptions and Decisions
 
 These are the assumptions and decisions made for the design and development of this project:
 
-- It is assumed that the GCP project was created and has billing enabled.
-- It is assumed that the API is exposed to the general public.
+### Assumptions
+
+- The GCP project was created and has billing enabled.
+- The API is exposed to the general public.
 - The model is assumed to be serialized and does not need to be retrained.
+- API users know the request format in advance, so there is no need for data validation.
+- It is assumed that the API has no bugs, so the Unit tests will not be implemented.
 - The model only performs a single flight delay prediction per API request.
-- API users know the request format in advance.
+- For the deployment, the developer should access Cloud Shell in the target project, clone this repository and execute the required commands.
+
+### Decisions
+
 - Selection of GCP over other cloud services is due to familiarity with the platform.
 - Cloud Run is selected over Cloud Functions for the API deployment, taking into consideration that the former is capable of handling multiple requests at a time, while the latter only handles one request at a time.
-- For the deployment, the developer should access Cloud Shell in the target project, clone this repository and execute the required commands.
-- Unit tests were not implemented due to time constraints.
 
 ---
 
@@ -41,6 +46,16 @@ The Continuous Integration and Continuous Delivery Pipeline for this project is 
 ## Improvement and Future Work
 
 The improvements and considerations that must be applied to the current implementation in order to guarantee security, performance, quality and reliability are described below.
+
+### Quality
+
+- Implement data validation to the JSON input, with the following restrictions:
+    - Type: String
+    - Length: 73
+    - Characters: 36 commas (",")
+    - Digits: 37 with values 0 or 1
+
+- Implement Unit Tests with [Unittest](https://docs.python.org/3/library/unittest.html) or [Pytest](https://docs.pytest.org/en/7.1.x/).
 
 ### Security
 
