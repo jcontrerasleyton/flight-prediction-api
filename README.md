@@ -37,15 +37,6 @@ Use this option if you want to execute the entire pipeline at once:
 
 Use this option is you want to execute one command at a time:
 
- * Create a new project on Google Cloud with [billing enabled](https://cloud.google.com/billing/docs/how-to/modify-project), and launch [Cloud Shell](https://cloud.google.com/shell/docs/using-cloud-shell).
-
- * Clone this repo:
-
-    ```bash
-    git clone https://github.com/jcontrerasleyton/flight-prediction-api
-    cd flight-prediction-api
-    ```
-
   * Set project ID:
 
     ```bash
