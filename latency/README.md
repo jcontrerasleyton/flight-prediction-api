@@ -24,6 +24,10 @@ Regarding the average latency, this also increases as there are more connections
 
 If we compare the number of connections between test 1 and test 7 there is an increase of 7422%, while the increase in latency is only 47%, this means that Cloud Run gives us a reliability and scalability platform that adapts seamlessly to changes in workload.
 
+In average, the time that is use to get the json input, transform it to a numpy array and the model prediction is 1.68ms, this means that the latency depends in the connection to the Cloud Service and the machine running this tests, in order to get better performance a machine with better CPU specifications is required. 
+
+Also, it would be worthy to carry out an analysis of the different frameworks and servers offered to expose APIs, carry out tests with the most recommended ones and choose the best one based on the one with the lowest latency.
+
 ### 
 
 ---
