@@ -43,6 +43,34 @@ The Continuous Integration and Continuous Delivery Pipeline for this project is 
 
 ---
 
+## SLI and SLO 
+
+## Service Level Indicators (SLI)
+
+For this project, the SLI is the following:
+
+- 95th percentile of successful requests whose latency is lower than 300ms
+- 99th percentile of successful requests whose latency is lower than 550ms
+
+This metric was chosen considering the results delivered by the stress test, where, on average, the latency is less than 300ms. In addition, when reviewing the historical data of the API service in Cloud Run, the 95 percentile has a latency of less than 300ms and the 99 percentile has a latency of less than 550ms, regardless of the number of requests. 
+
+![cloudRun](/media/cloud_run.png)
+
+## Service Level Objectives (SLO)
+
+For this project, the SLO is the following:
+
+- 95% of requests with latency lower than 300ms over a month
+- 99% of requests with latency lower than 550ms over a month
+
+The time window was chosen because it is neither as small as a week nor as large as a semester or year.
+
+If it were weekly, this would imply weekly analyzes on the SLO and considering that there can be many models being exposed at the same time, it would become unmanageable.
+
+On the other hand, if it were a semester or year window, it would be a long time before course-correcting decisions can be made in SLO-related issues.
+
+---
+
 ## Improvement and Future Work
 
 The improvements and considerations that must be applied to the current implementation in order to guarantee security, performance, quality and reliability are described below.

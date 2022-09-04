@@ -19,6 +19,9 @@ The Flight Delay Prediction API is a Rest API solution developed in Python. It e
     ```
 
  * Execute the pipeline using a [script](#deploy-with-a-script) or [step by step](#deploy-step-by-step) (manually).
+
+---
+
 ### Deploy with a script
 
 Use this option if you want to execute the entire pipeline at once:
@@ -32,6 +35,8 @@ Use this option if you want to execute the entire pipeline at once:
   * At the end of the execution a link to the API endpoint will appear, use this URL to send REST requests.
 
     ![Endpoint1](/media/endpoint.png)
+
+---
 
 ### Deploy step by step
 
@@ -69,7 +74,9 @@ Use this option is you want to execute one command at a time:
 
 ---
 
-See [DOC](doc/README.md) for more details of Assumptions, Model and Arquitecture.
+## More information
+
+See [Doc](doc/README.md) for more details of Assumptions, Model and Arquitecture.
 
 See [Latency](latency/README.md) for more details of latency stress test.
 
