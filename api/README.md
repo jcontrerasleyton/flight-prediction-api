@@ -29,7 +29,21 @@ The REST API file structure is the following:
 
 ## REST request
 
-To access the API prediction a JSON POST request is needed with the following structure:
+To access the API prediction a JSON POST request is needed to the following endpoint:
+
+```bash
+API_ENDPOINT/prediction
+```
+
+The **API_ENDPOINT** value can be found at the end of the terraform log.
+
+Example:
+
+```bash
+https://flight-prediction-yhenhj7rpq-uc.a.run.app/prediction
+```
+
+The request have the following JSON structure:
 
 ```json
 {
@@ -37,7 +51,7 @@ To access the API prediction a JSON POST request is needed with the following st
 }
 ```
 
-The feature_vector value needs to be a csv styled string with 0's and 1's separated by commas, its length cant be lower or higher than 73 and the number of digits must be equal to 37.
+The **feature_vector** value needs to be a csv styled string with 0's and 1's separated by commas, its length cant be lower or higher than 73 and the number of digits must be equal to 37.
 
 ---
 ## REST response
