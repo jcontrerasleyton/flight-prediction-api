@@ -80,6 +80,8 @@ Use this option is you want to execute one command at a time:
 
 See [DOC](doc/README.md) for more details of Assumptions, Model and Arquitecture.
 
+See [Latency](latency/README.md) for more details of latency stress test.
+
 See [API](api/README.md) for more details of the API implementation.
 
 See [Terraform](terraform/README.md) for more details of the Terraform implementation.

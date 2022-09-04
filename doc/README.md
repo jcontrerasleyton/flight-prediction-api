@@ -12,6 +12,7 @@ These are the assumptions and decisions made for the design and development of t
 - Selection of GCP over other cloud services is due to familiarity with the platform.
 - Cloud Run is selected over Cloud Functions for the API deployment, taking into consideration that the former is capable of handling multiple requests at a time, while the latter only handles one request at a time.
 - For the deployment, the developer should access Cloud Shell in the target project, clone this repository and execute the required commands.
+- Unit tests were not implemented due to time constraints.
 
 ---
 
@@ -60,6 +61,12 @@ The improvements and considerations that must be applied to the current implemen
     - Only requests that contain a signed JSON Web Token are granted access to the API. In other words, only authorized systems can access the API.
 
     - One advantage is that is harder to impersonate a user because the token needs to be signed unlike others API token solutions.
+
+    - Take in mind that his has an impact in latency due to the token decode and verification process.
+
+- Another authorization option is [OAuth (2.0)](https://auth0.com) wich also creates access tokens and has third party integration (so authorized users can access the API with a third party account).
+    
+    - OAuth (2.0) can be used for authentication but is recommended to use [OpenID Connect](https://openid.net/connect/) as an extra authentication layer on top of OAuth (2.0).
 
     - Take in mind that his has an impact in latency due to the token decode and verification process.
 
