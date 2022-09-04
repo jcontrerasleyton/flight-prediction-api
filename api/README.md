@@ -2,7 +2,7 @@
 
 ## Description
 
-This REST API, developed with the Flask web framework in Python, is responsible for predicting the delay or non-delay of flights that land or take off from the Santiago de Chile airport (SCL).
+This REST API, developed with the [Flask](https://flask.palletsprojects.com/en/2.2.x/) web framework in Python and exposed with a [Gunicorn](https://gunicorn.org) WSGI HTTP Server, is responsible for predicting the delay or non-delay of flights that land or take off from the Santiago de Chile airport (SCL).
 
 ---
 
@@ -92,6 +92,10 @@ To run the API locally:
     gunicorn --bind :8080 --workers 1 --threads 8 app:app
     ```
 
-* Generate a POST request (E.g. Postman):
+* Generate a POST request to the (E.g. Postman):
+
+    ```url
+    http://0.0.0.0:8080/prediction
+    ```
 
     ![POST request](/media/postman.png)

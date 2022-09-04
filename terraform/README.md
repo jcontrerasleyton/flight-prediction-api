@@ -2,7 +2,7 @@
 
 ## Description
 
-This Terraform module is used to provision the GCP infrastructure required to expose the prediction API.
+This [Terraform](https://www.terraform.io) module is used to provision the GCP infrastructure required to expose the prediction API.
 
 Enables the following APIs:
 - run.googleapis.com
